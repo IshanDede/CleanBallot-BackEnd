@@ -25,6 +25,10 @@ const candidateSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  voteCount: {
+    type: Number,
+    required: true,
+  },
   status: {
     type: String,
     default: "pending",

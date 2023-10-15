@@ -14,7 +14,11 @@ const voterSchema = mongoose.Schema({
     required: true,
   },
   age: {
-    type: String,
+    type: Number,
+    required: true,
+  },
+  dateOfBirth: {
+    type: Date, // Use the Date type for date of birth
     required: true,
   },
   state: {
