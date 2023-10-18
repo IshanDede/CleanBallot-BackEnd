@@ -6,6 +6,7 @@ const {
   updateVoter,
   deleteVoter,
 } = require("../controllers");
+const { casteVote } = require("../controllers/castvote");
 
 const router = require("express").Router();
 
@@ -20,6 +21,8 @@ router
 
   .patch("/voters/:id", updateVoter)
 
-  .delete("/voters/:id", deleteVoter);
+  .delete("/voters/:id", deleteVoter)
+  
+  .post("/cast-vote", casteVote);
 
 module.exports = router;
