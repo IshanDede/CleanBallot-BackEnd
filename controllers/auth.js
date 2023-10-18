@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 const User = require("../models/User");
 
-const SECRET_KEY = process.env.ADD_USER_SECRET || "VizFaculty is Calculating";
+const SECRET_KEY = process.env.ADD_USER_SECRET || "CleanBallot is Calculating";
 
 const register = async (req, res, next) => {
     try {
