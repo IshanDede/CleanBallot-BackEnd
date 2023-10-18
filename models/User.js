@@ -1,27 +1,40 @@
 const { default: mongoose } = require("mongoose");
 
-const userSchema = mongoose.Schema({
+const userSchema = mongoose.Schema(
+  {
     name: {
-        type: String,
-        required: [function () {return !this.remoteAdd},"register date is required"],
-        trim: true
+      type: String,
+      required: [
+        function () {
+          return !this.remoteAdd;
+        },
+        "register date is required",
+      ],
+      trim: true,
     },
     email: {
-        type: String,
-        required: true,
-        unique: [true, "Email already registered"],
+      type: String,
+      required: true,
+      unique: [true, "Email already registered"],
     },
     password: {
-        type: String,
-        required: [function () {return !this.remoteAdd},"Password Is Required"],
+      type: String,
+      required: [
+        function () {
+          return !this.remoteAdd;
+        },
+        "Password Is Required",
+      ],
     },
     role: {
-        type: String,
-        trim: true,
+      type: String,
+      trim: true,
     },
-},{
-    timestapms:true
-});
+  },
+  {
+    timestamps: true,
+  }
+);
 
 // userSchema.set("timestamps",true);
 
