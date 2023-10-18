@@ -1,4 +1,4 @@
-const { Candidate } = require("../models");
+const Candidate = require("../models/Candidate").Candidate;
 
 
 const casteVote = async (req, res, next)=>{
