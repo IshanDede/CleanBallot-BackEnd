@@ -4,12 +4,6 @@ const userSchema = mongoose.Schema(
   {
     name: {
       type: String,
-      required: [
-        function () {
-          return !this.remoteAdd;
-        },
-        "register date is required",
-      ],
       trim: true,
     },
     email: {
@@ -19,12 +13,7 @@ const userSchema = mongoose.Schema(
     },
     password: {
       type: String,
-      required: [
-        function () {
-          return !this.remoteAdd;
-        },
-        "Password Is Required",
-      ],
+      required: true,
     },
     role: {
       type: String,
